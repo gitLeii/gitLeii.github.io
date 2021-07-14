@@ -12,9 +12,9 @@
 .navbar{
   position: fixed;
   width: 100%;
-  background-color: crimson;
   font-family: 'Ubuntu', sans-serif;
-  padding: 15px 0;
+  padding: 30px 0;
+  transition: all 0.3s ease;
 }
 
 .max-width{
@@ -35,25 +35,217 @@
   font-weight: 600;
 }
 
+.navbar .logo a span{
+  color: crimson;
+}
+
+.navbar.sticky{
+  padding: 15px 0;
+  background: crimson;
+}
+.navbar.sticky .menu li, .navbar.sticky .logo a span,.navbar.sticky .logo a ,.navbar.sticky .menu li:hover{
+  color: #fff;
+}
+
+
 .navbar .menu li{
   list-style: none;
   display: inline-block;
+}
+.navbar .menu li{
   color: #fff;
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li:hover{
+ color: crimson;
+}
+
+/* menu button navbar  */
+
+.menu-btn{
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
 }
 
 /* home body section */
 
 .home{
   display: flex;
-  background: url("images/banner.jpg") no-repeat center;
+  background: url("../images/banner.jpg") no-repeat center;
   height: 100vh;
-  color: #000;
+  color: #fff;
   min-height: 500px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .home .max-width{
   margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+  font-size: 27px;
+}
+.home .home-content .text-2{
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .text-3{
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .home-content .text-3 span{
+  color: crimson;
+  font-weight: 500;
+}
+
+.home .home-content a{
+  display: inline-block;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  background: crimson;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+  color: crimson;
+  background: none;
+}
+
+
+/* my project section  */
+
+.projects .project-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  margin: 5px;
+}
+
+h2 {
+  color: crimson;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 30px 0;
+}
+.projects .project-content h5 {
+  padding: 15px 0;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 100;
+
+}
+.projects .project-content i{
+  font-size: 35px;
+  padding: 2px 30px;
+}
+.projects .project-content a{
+  display: inline-block;
+  color: crimson;
+  border: 2px solid crimson;
+  font-size: 18px;
+  padding: 10px 30px;
+  background: none;
+  border-radius: 6px;  
+  transition: all 0.3s ease;
+}
+.projects .project-content a:hover{
+  color: #fff;
+  background: crimson;
+}
+
+
+
+/* responsive media styles  */
+
+@media (max-width:1104px){
+  .home .max-width{
+    margin-left: 0px;
+  }
+}
+
+@media (max-width:991px){
+  .max-width{
+    padding: 0 50px;
+  }
+}
+
+@media (max-width:947px){
+ 
+  .menu-btn{
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn i.active:before
+  {
+    content: "\f00d";
+  }
+
+  .navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+    left: 0;
+  }
+  .navbar .menu li{
+    display: block;
+  }
+  .navbar .menu li a{
+    display: inline-block;
+    margin:20px 0;
+    font-size: 25px;
+  }
+  .home .home-content .text-2{
+    font-size: 70px;
+  }
+  .home .home-content .text-3{
+    font-size: 35px;
+  }
+  .home .home-content a{
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width:690px){
+  .max-width{
+    padding: 0 23px;
+  }
+  .home .home-content .text-2{
+    font-size: 60px;
+  }
+  .home .home-content .text-3{
+    font-size: 32px;
+  }
+  .home .home-content a{
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width:500px){
+  .max-width{
+    padding: 0 23px;
+  }
+  .home .home-content .text-2{
+    font-size: 50px;
+  }
+  .home .home-content .text-3{
+    font-size: 27px;
+  }
 }
