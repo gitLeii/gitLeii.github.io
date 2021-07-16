@@ -164,8 +164,11 @@ h2 {
   color: #fff;
   background: crimson;
 }
+.banner-icon img
+{
+  min-height: 500px;
 
-
+}
 
 /* responsive media styles  */
 
@@ -251,5 +254,4 @@ h2 {
   .home .home-content .text-3{
     font-size: 27px;
   }
-
 }
