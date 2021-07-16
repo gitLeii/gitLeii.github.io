@@ -139,7 +139,7 @@ h2 {
   font-family: 'Ubuntu', sans-serif;
   padding: 30px 0;
 }
-.projects .project-content h5 {
+.projects .project-content h5, .projects .project-content span {
   padding: 15px 0;
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
